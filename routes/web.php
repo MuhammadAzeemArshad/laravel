@@ -19,6 +19,6 @@ Route::get('/', function () {
 
 Route::get('/post', function () {
     return view('posts');
-});
+})->name('Post');
 
-Route::view('/anchor', );
+Route::view('/anchor', 'anchor');
