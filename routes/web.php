@@ -17,8 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/post', function () {
-    return view('posts');
+Route::get('/services', function () {
+    return view('services');
 })->name('Post');
 
-Route::view('/anchor', 'anchor');
+Route::view('/about', 'about');
+
+route::get('/header', function () {
+    return view('header');
+
+});
+
+route::get('/footer', function () {
+    return view('footer');
+
+});

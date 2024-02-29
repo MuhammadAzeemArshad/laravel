@@ -1,3 +1,5 @@
+@include('header')
+
 <h1>Our First page</h1>
 <br>
 <a href="/anchor">go to</a>
@@ -26,3 +28,6 @@
 </ul>
 
 {{ $Name }}
+
+
+@include('footer')
