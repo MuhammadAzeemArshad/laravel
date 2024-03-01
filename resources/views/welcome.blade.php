@@ -1,5 +1,7 @@
 @include('header')
 
+
+@yield('content')
 <h1>Our First page</h1>
 <br>
 <a href="/anchor">go to</a>
