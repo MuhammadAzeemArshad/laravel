@@ -32,3 +32,9 @@ route::get('/footer', function () {
     return view('footer');
 
 });
+
+route::get('/contact', function () {
+
+    $name = "Data pass from route";
+    return view('contact', ['data' => $name]);
+})->name('contact');

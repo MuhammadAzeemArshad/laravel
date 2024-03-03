@@ -16,7 +16,7 @@
   <a href="/">Home</a>
   <a href="/about">About</a>
   <a href="/services">Services</a>
-  <a href="#">Contact</a>
+  <a href="{{ route('contact')}}">Contact</a>
 </nav>
 
 <img src="" alt="Your Website Logo" class="logo">

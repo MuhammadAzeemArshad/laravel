@@ -1,7 +1,11 @@
 @include('header')
 
+@hasSection('content')
+        @yield('content')
+    @else
+        <p>No content found</p>
+@endif
 
-@yield('content')
 <h1>Our First page</h1>
 <br>
 <a href="/anchor">go to</a>
