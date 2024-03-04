@@ -13,6 +13,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+function studentsrecord(){
+    return [
+        60001 => [
+            'name' => 'Muhammad Azeem Arshad',
+             'class' => '9th',
+             'grade' => 'A+',
+              'address' => 'chack no 25 SB bhagtanwla',
+        ],
+        60002 => [
+            'name' => 'Muhammad Abdullah Arshad',
+             'class' => '8thth',
+             'grade' => 'A+',
+              'address' => 'chack no 25 SB bhagtanwla',
+        ],
+        60003 => [
+            'name' => 'Umer Wahid',
+             'class' => '10th',
+             'grade' => 'A+',
+              'address' => 'sargodha',
+        ],
+        60004 => [
+            'name' => 'Moazzam Mahmood',
+             'class' => '9th',
+             'grade' => 'A+',
+              'address' => 'fasilabad',
+        ]
+];
+}
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -38,3 +67,14 @@ route::get('/contact', function () {
     $name = "Data pass from route";
     return view('contact', ['data' => $name]);
 })->name('contact');
+
+route::get('/users', function () {
+    $users = studentsrecord();
+    return view('users', ['users' => $users]);
+});
+route::get('/user/{id}', function ($id) {
+    $users = studentsrecord();
+    $user = $users[$id];
+
+    return view('user', ['id' => $user]);
+})->name('view.user');

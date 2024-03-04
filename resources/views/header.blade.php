@@ -17,6 +17,7 @@
   <a href="/about">About</a>
   <a href="/services">Services</a>
   <a href="{{ route('contact')}}">Contact</a>
+  <a href="/users">users</a>
 </nav>
 
 <img src="" alt="Your Website Logo" class="logo">
