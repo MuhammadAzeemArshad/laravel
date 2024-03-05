@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use app\Http\Controllers\FirstControler;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,10 +57,7 @@ route::get('/header', function () {
 
 });
 
-route::get('/footer', function () {
-    return view('footer');
-
-});
+route::get('/footer', [FirstControler::class, 'test']);
 
 route::get('/contact', function () {
 
@@ -72,6 +69,9 @@ route::get('/users', function () {
     $users = studentsrecord();
     return view('users', ['users' => $users]);
 });
+
+
+
 route::get('/user/{id}', function ($id) {
     $users = studentsrecord();
     $user = $users[$id];
